@@ -8,7 +8,7 @@ const staticCache = require('koa-static-cache');
 const routersPath = '/koa/routers/';
 const sendfile = require('koa-sendfile');
 var configsCache = {};
-const port =80;
+const port =5555;
 
 const config = require(path.resolve('plugins/read-config.js'));
 
@@ -65,7 +65,7 @@ app.use(router.routes());
 
 //============静态文件资源===========
 app.use(staticCache(path.join(__dirname, '/static'), {
-     maxAge: 365 * 24 * 60 * 60
+     //maxAge: 365 * 24 * 60 * 60
 }));
 
 
